@@ -10,10 +10,12 @@ namespace ProniaTask.DataAccesLayer
 
         }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Slider>Sliders { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             options.UseSqlServer("Server=LAPTOP-PVUROI38\\SQLEXPRESS; Database=AB106Pronia; Trusted_Connection=True;TrustServerCertificate=True");
             base.OnConfiguring(options);
         }
+        
     }
 }
